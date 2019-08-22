@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package intensiv
+ * @package wordpress
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses intensiv_header_style()
+ * @uses wordpress_header_style()
  */
-function intensiv_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'intensiv_custom_header_args', array(
+function wordpress_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'wordpress_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'intensiv_header_style',
+		'wp-head-callback'       => 'wordpress_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'intensiv_custom_header_setup' );
+add_action( 'after_setup_theme', 'wordpress_custom_header_setup' );
 
-if ( ! function_exists( 'intensiv_header_style' ) ) :
+if ( ! function_exists( 'wordpress_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see intensiv_custom_header_setup().
+	 * @see wordpress_custom_header_setup().
 	 */
-	function intensiv_header_style() {
+	function wordpress_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*
