@@ -10,7 +10,7 @@
 
 
     // This is your option name where all the Redux data is stored.
-    $opt_name = "wordpress_options";
+    $opt_name = "redux_demo";
 
     // This line is only for altering the demo. Can be easily removed.
     $opt_name = apply_filters( 'redux_demo/opt_name', $opt_name );
@@ -278,47 +278,40 @@
 
 
     Redux::setSection( $opt_name, array(
-            'title'            => __( 'Header', 'redux-framework-demo' ),
-            'id'               => 'header',
-            // 'subsection'       => true,
-            'customizer_width' => '450px',
-            'desc'             => __( 'Upload your logo ', 'redux-framework-demo' ),
-            'fields'           => array(
-                array(
-                    'id'       => 'wordpress-logo',
-                    'type'     => 'media',
-                    'url'      => true,
-                    'title'    => __( 'Your logo upload', 'redux-framework-demo' ),
-                    'compiler' => 'true',
-                    //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                    'desc'     => __( 'Upload your logo', 'redux-framework-demo' ),
-                    'subtitle' => __( 'Recomended size 200px - 100px', 'redux-framework-demo' ),
-                    'default'  => array( 'url' => 'https://s.wordpress.org/style/images/codeispoetry.png' ),
-                    //'hint'      => array(
-                    //    'title'     => 'Hint Title',
-                    //    'content'   => 'This is a <b>hint</b> for the media field with a Title.',
-                    //)
-                ),
-                array(
-                    'id'       => 'header-email',
-                    'type'     => 'text',
-                    'title'    => __( 'Header email', 'redux-framework-demo' ),
-                    'subtitle' => __( 'Header email', 'redux-framework-demo' ),
-                    'desc'     => __( 'Header email', 'redux-framework-demo' ),
-                    'validate' => 'email',
-                    'msg'      => 'Type a correct email',
-                    'default'  => 'helikeel@gmail.com',
-                     ),
-                 array(
-                    'id'       => 'header-phone',
-                    'type'     => 'text',
-                    'title'    => __( 'Header phone', 'redux-framework-demo' ),
-                    'subtitle' => __( 'Header phone', 'redux-framework-demo' ),
-                    'desc'     => __( 'Header phone', 'redux-framework-demo' ),
+        'title'            => __( 'Header Settings', 'redux-framework-demo' ),
+        'id'               => 'header',
+        'desc'             => __( 'Header Settings', 'redux-framework-demo' ),
+        'customizer_width' => '400px',
+        'icon'             => 'el el-bell'
+    ) );
 
-                     ),
-            )
-        ) );
+
+
+Redux::setSection( $opt_name, array(
+        'title'            => __( 'Upload Logo', 'redux-framework-demo' ),
+        'id'               => 'logo',
+        'subsection'       => true,
+        'customizer_width' => '450px',
+        'desc'             => __( 'Upload Your Logo ', 'redux-framework-demo' ),
+        'fields'           => array(
+            array(
+                'id'       => 'intensiv-logo',
+                'type'     => 'media',
+                'url'      => true,
+                'title'    => __( 'Your Logo', 'redux-framework-demo' ),
+                'compiler' => 'true',
+                //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                'desc'     => __( 'Upload Your Logo', 'redux-framework-demo' ),
+                'subtitle' => __( 'Recomended size 200 px x 100 px', 'redux-framework-demo' ),
+                'default'  => '',
+                //'hint'      => array(
+                //    'title'     => 'Hint Title',
+                //    'content'   => 'This is a <b>hint</b> for the media field with a Title.',
+                //)
+            ),
+            
+        )
+    ) );
 
 
     // -> START Basic Fields
