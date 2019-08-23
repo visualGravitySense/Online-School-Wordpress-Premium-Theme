@@ -247,10 +247,10 @@ nav.main-nav ul.nav-menu li{
 	position:relative;
 }
 
-nav.main-nav > ul.nav-menu > li:hover, nav.main-nav > ul.nav-menu > li.current-menu-item{
+nav.main-nav ul.nav-menu li:hover, nav.main-nav ul.nav-menu li.active{
 	background:#60ad4c;
 }
-nav.main-nav > ul.nav-menu > li:hover a, nav.main-nav > ul.nav-menu > li.current-menu-item a{
+nav.main-nav ul.nav-menu li:hover a, nav.main-nav ul.nav-menu li.active a{
 	color:#fff;
 }
 nav.main-nav ul.nav-menu li a{
@@ -260,29 +260,29 @@ nav.main-nav ul.nav-menu li a{
 	color:#7f7f7f;
 	text-decoration:none;
 }
-nav.main-nav ul.nav-menu li:hover .sub-menu{
+nav.main-nav ul.nav-menu li:hover .drop-menu{
 	display:block;
 }
-nav.main-nav ul.nav-menu li:hover:before, nav.main-nav ul.nav-menu li.current-menu-item:before{
+nav.main-nav ul.nav-menu li:hover:before, nav.main-nav ul.nav-menu li.active:before{
 	content:"";
 	position:absolute;
 	display:block;
 	border-top: 47px solid rgba(0,0,0,0.1);
-    border-right: 7px solid transparent;
+border-right: 7px solid transparent;
 	left:0px;
 	
 }
-.sub-menu > li:hover:before{
+#drop-menu > li:hover:before{
 	content:"";
 	border:0px;
 }
-.sub-menu{
+.dropdown{
 	position:relative;
 }
-.sub-menu i {
+.dropdown i {
 margin-left: 8px;
 }
-.sub-menu{
+.drop-menu{
 	display:none;
 	position:absolute;
 	min-width:120px;
@@ -295,15 +295,15 @@ margin-left: 8px;
 	-webkit-border-radius:0px 0px 5px 5px;
 	-moz-border-radius:0px 0px 5px 5px;
 }
-.sub-menu > li {
+#drop-menu > li {
 	padding: 0px 18px 0px 25px;
 }
-.sub-menu > li > a{
+#drop-menu > li > a{
 	line-height:30px;
 	color:#fff;
 
 }
-.sub-menu > li > a:hover{
+#drop-menu > li > a:hover{
 	text-decoration:underline;
 }
 .search{
@@ -349,8 +349,8 @@ border-right: 7px solid transparent;
 	-webkit-border-radius:0px 5px 5px 0px;
 	-moz-border-radius:0px 5px 5px 0px;
 	min-width:50px;
-    overflow: hidden;
-        -webkit-transition: all 1s ease-in-out;
+overflow: hidden;
+-webkit-transition: all 1s ease-in-out;
         -moz-transition: all 1s ease-in-out;
         -o-transition: all 1s ease-in-out;
         transition: all 1s ease-in-out;

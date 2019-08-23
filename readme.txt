@@ -10,6 +10,7 @@ License: GNU General Public License v2 or later
 License URI: LICENSE
 
 A starter theme called intensiv.
+MAde By Dmitri Gornakov special for digo.ee Startup accelerator
 
 == Description ==
 
